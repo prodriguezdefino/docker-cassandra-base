@@ -1,4 +1,4 @@
-## Apache Hadoop Base image
+## Apache Cassandra Base image
 #
 FROM prodriguezdefino/ubuntujava
 MAINTAINER prodriguezdefino prodriguezdefino@gmail.com
