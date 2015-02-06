@@ -7,7 +7,7 @@ echo " "
 IP=`hostname --ip-address`
 HOSTNAME=`hostname`
 
-SEEDS=$(env | grep SEEDS_IPS)
+SEEDS=$(env | grep SEEDS_IPS | sed s/SEEDS_IPS=//)
 CLSTR_NAME=$(env | grep CLUSTER_NAME)
 
 if [ -z "$SEEDS" ]; then
