@@ -6,7 +6,7 @@ MAINTAINER prodriguezdefino prodriguezdefino@gmail.com
 # Install Cassandra
 RUN echo "deb http://debian.datastax.com/community stable main" | sudo tee -a /etc/apt/sources.list.d/datastax.sources.list
 RUN curl -L http://debian.datastax.com/debian/repo_key | sudo apt-key add -
-RUN apt-get update && apt-get install -y dsc21 datastax-agent
+RUN apt-get update && apt-get install -y dsc21 datastax-agent opscenter-free
 
 # Deploy startup script
 ADD init.sh /usr/local/bin/cass-start
