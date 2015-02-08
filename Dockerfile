@@ -20,5 +20,6 @@ RUN chmod 755 /usr/local/bin/cass-stop
 RUN cp /etc/cassandra/cassandra.yaml /etc/cassandra/cassandra.yaml.template
 RUN cp /etc/cassandra/cassandra-env.sh /etc/cassandra/cassandra-env.sh.template
 RUN cp /etc/cassandra/logback.xml /etc/cassandra/logback.xml.template
+RUN cp /etc/opscenter/opscenterd.conf /etc/opscenter/opscenterd.conf.template
 
 EXPOSE 7199 7000 7001 9160 9042
