@@ -32,6 +32,15 @@ echo "**************************"
 echo " "
 service datastax-agent start
 
+if [ -z "$OPTS_CENTER" ]; then
+	echo " "
+	echo "Starting DataStax agent..."
+	echo "**************************"
+	echo " "
+	sed "s/^interface.*/interface = $HOSTNAME/;" /etc/opscenter/opscenterd.conf.template > /etc/opscenter/opscenterd.conf
+	service opscenterd start
+fi
+
 # Start Cassandra
 echo " "
 echo "Starting Cassandra..."
