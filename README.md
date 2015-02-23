@@ -4,7 +4,7 @@ This image installs an Apache Cassandra v2.1.2 node in an Ubuntu 14.04 container
 
 Inside the image there is a script to start up the node ```cass-start``` which expects two env variables to modify its behaviour (for example: be aware of any seed node or configure and start the ops-center in that node). 
 
-## Configure a seed nodes
+## Configure a seed node
 
 In order to configure a seed node just start  a node with ```cass-start``` without any configuration, this will asume that the current node is a seed of the ring. 
 
