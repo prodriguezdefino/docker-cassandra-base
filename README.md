@@ -14,4 +14,4 @@ Also it is possible to configure the cluster name using the env variable ```CLUS
 
 ## Configure Ops-Center in a node
 
-In a similar way, one can configure a node to run the [Datastax Ops-Center](http://www.datastax.com/what-we-offer/products-services/datastax-opscenter) and then after node startup the web console will be accessible at ```http://<containers-ip>:8888```. To acchieve this setting the environment variable ```OPTS_CENTER``` will do the trick.
+In a similar way, one can configure a node to run the [Datastax Ops-Center](http://www.datastax.com/what-we-offer/products-services/datastax-opscenter) and then after node startup the web console will be accessible at ```http://<containers-ip>:8888```. To acchieve this setting the environment variable ```OPTS_CENTER=true``` will do the trick.
