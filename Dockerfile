@@ -22,4 +22,4 @@ RUN cp /etc/cassandra/cassandra-env.sh /etc/cassandra/cassandra-env.sh.template
 RUN cp /etc/cassandra/logback.xml /etc/cassandra/logback.xml.template
 RUN cp /etc/opscenter/opscenterd.conf /etc/opscenter/opscenterd.conf.template
 
-EXPOSE 7199 7000 7001 9160 9042
+EXPOSE 7199 7000 7001 9160 9042 8888
