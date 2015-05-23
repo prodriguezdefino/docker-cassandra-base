@@ -6,7 +6,7 @@ MAINTAINER prodriguezdefino prodriguezdefino@gmail.com
 # Install Cassandra
 RUN echo "deb http://debian.datastax.com/community stable main" | sudo tee -a /etc/apt/sources.list.d/datastax.sources.list
 RUN curl -L http://debian.datastax.com/debian/repo_key | sudo apt-key add -
-RUN apt-get update && apt-get install -y libssl0.9.8 dsc21 datastax-agent opscenter-free
+RUN apt-get update && apt-get install -y libssl0.9.8 dsc21 datastax-agent opscenter
 
 # Deploy startup script
 ADD init.sh /usr/local/bin/cass-start
@@ -22,4 +22,4 @@ RUN cp /etc/cassandra/cassandra-env.sh /etc/cassandra/cassandra-env.sh.template
 RUN cp /etc/cassandra/logback.xml /etc/cassandra/logback.xml.template
 RUN cp /etc/opscenter/opscenterd.conf /etc/opscenter/opscenterd.conf.template
 
-EXPOSE 7199 7000 7001 9160 9042 8888
+EXPOSE 22 7199 7000 7001 9160 9042 8888 61620 61621
