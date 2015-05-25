@@ -8,14 +8,6 @@ RUN echo "deb http://debian.datastax.com/community stable main" | sudo tee -a /e
 RUN curl -L http://debian.datastax.com/debian/repo_key | sudo apt-key add -
 RUN apt-get update && apt-get install -y libssl0.9.8 dsc21 datastax-agent opscenter
 
-# Deploy startup script
-ADD init.sh /usr/local/bin/cass-start
-RUN chmod 755 /usr/local/bin/cass-start
-
-# Deploy shutdown script
-ADD shutdown.sh /usr/local/bin/cass-stop
-RUN chmod 755 /usr/local/bin/cass-stop
-
 # Save by default config files for later 
 RUN cp /etc/cassandra/cassandra.yaml /etc/cassandra/cassandra.yaml.template
 RUN cp /etc/cassandra/cassandra-env.sh /etc/cassandra/cassandra-env.sh.template
